@@ -1,9 +1,7 @@
 diff a/config.def.h b/config.def.h	(rejected hunks)
-@@ -11,6 +11,7 @@ static char *progress_proxy_untrust = "#FF6600";
- static char *stylefile      = "~/.surf/style.css";
- static char *scriptfile     = "~/.surf/script.js";
- static char *cookiefile     = "~/.surf/cookies.txt";
-+static char *downdir        = "/tmp";
- static time_t sessiontime   = 3600;
- static char *cafile         = "/etc/ssl/certs/ca-certificates.crt";
- static char *strictssl      = FALSE; /* Refuse untrusted SSL connections */
+@@ -164,3 +164,5 @@ static Button buttons[] = {
+ 	{ OnAny,        0,              9,      clicknavigate,  { .i = +1 },    1 },
+ 	{ OnMedia,      MODKEY,         1,      clickexternplayer, { 0 },       1 },
+ };
++
++#define HOMEPAGE "https://duckduckgo.com/"

@@ -1,3 +1,8 @@
 config.h
 *.diff
 *.c.rej
+*.diff.1
+surf
+config.h
+*.o
+*.so
