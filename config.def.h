@@ -194,3 +194,17 @@ static Button buttons[] = {
 	{ OnAny,        0,              9,      clicknavigate,  { .i = +1 },    1 },
 	{ OnMedia,      MODKEY,         1,      clickexternplayer, { 0 },       1 },
 };
+
+#define HOMEPAGE "https://duckduckgo.com"
+
+
+/* DOWNLOAD(URI, referer) */
+#define DOWNLOAD(d, r) { \
+	.v = (char *[]){ "/bin/sh", "-c", \
+		"cd ~/Telechargements;"\
+		"st -e /bin/sh -c \"aria2c -U '$1'" \
+		" --referer '$2' --load-cookies $3 --save-cookies $3 '$0';" \
+		" sleep 3;\"", \
+		d, useragent, r, cookiefile, NULL \
+	} \
+}
